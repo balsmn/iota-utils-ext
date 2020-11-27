@@ -1,0 +1,13 @@
+# ----------------------------------------
+# Blockchain configurations
+# ----------------------------------------
+iota:
+  config:
+    host: nodes.devnet.iota.org
+    seedSecurityLevel: 1
+    testMode: true
+
+logging:
+  level:
+    de:
+      agro: trace
