@@ -1,4 +1,4 @@
-package util.iota;
+package util.iota.ext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

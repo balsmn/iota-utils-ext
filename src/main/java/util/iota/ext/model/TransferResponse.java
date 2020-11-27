@@ -1,4 +1,4 @@
-package util.iota.model;
+package util.iota.ext.model;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package util.iota;
+package util.iota.ext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,8 +13,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import util.iota.config.BlockchainClientConfig;
-import util.iota.model.AccountResponse;
+import util.iota.ext.config.BlockchainClientConfig;
+import util.iota.ext.model.AccountResponse;
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest

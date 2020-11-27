@@ -1,10 +1,10 @@
-package util.iota;
+package util.iota.ext;
 
 import org.iota.jota.IotaAPI;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import util.iota.config.BlockchainClientConfig;
+import util.iota.ext.config.BlockchainClientConfig;
 import lombok.extern.slf4j.Slf4j;
 
 @Component

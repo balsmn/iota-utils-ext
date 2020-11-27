@@ -1,4 +1,4 @@
-# IoTA Utility Library
+# IoTA Utility Extension Library
 
 Developers wishing to use IoTA Blockchain end up learning a lot in depth in IoTA, which is a good thing.
 At the same time, it is cubersome to build micro services based on IoTA and especially if one wishes to use the
@@ -14,7 +14,7 @@ Include the following maven dependency to your microservice
 ```
 <dependency>
     <groupId>util.iota</groupId>
-    <artifactId>iota-utils</artifactId>
+    <artifactId>iota-utils-ext</artifactId>
     <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
 </dependency>

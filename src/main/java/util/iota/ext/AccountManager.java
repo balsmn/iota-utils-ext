@@ -1,4 +1,4 @@
-package util.iota;
+package util.iota.ext;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,9 +18,9 @@ import org.iota.jota.utils.SeedRandomGenerator;
 import org.iota.jota.utils.TrytesConverter;
 import org.springframework.stereotype.Component;
 
-import util.iota.config.BlockchainClientConfig;
-import util.iota.model.AccountResponse;
-import util.iota.model.WalletType;
+import util.iota.ext.config.BlockchainClientConfig;
+import util.iota.ext.model.WalletType;
+import util.iota.ext.model.AccountResponse;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

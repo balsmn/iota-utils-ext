@@ -1,4 +1,4 @@
-package util.iota.model;
+package util.iota.ext.model;
 
 public enum WalletType {
     NORMAL,
