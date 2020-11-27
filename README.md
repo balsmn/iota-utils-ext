@@ -20,3 +20,11 @@ Include the following maven dependency to your microservice
 </dependency>
 ```
 
+Add the following to your spring application configurations
+```
+iota:
+  config:
+    host: nodes.devnet.iota.org
+    seedSecurityLevel: 1
+    testMode: true
+```
