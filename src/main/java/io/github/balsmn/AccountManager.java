@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext;
+package io.github.balsmn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,9 +43,9 @@ import org.iota.jota.utils.SeedRandomGenerator;
 import org.iota.jota.utils.TrytesConverter;
 import org.springframework.stereotype.Component;
 
-import util.iota.ext.config.BlockchainClientConfig;
-import util.iota.ext.model.WalletType;
-import util.iota.ext.model.AccountResponse;
+import io.github.balsmn.model.WalletType;
+import io.github.balsmn.config.BlockchainClientConfig;
+import io.github.balsmn.model.AccountResponse;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

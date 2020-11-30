@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext;
+package io.github.balsmn;
 
 import java.util.List;
 import java.util.Optional;

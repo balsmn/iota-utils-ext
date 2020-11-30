@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext;
+package io.github.balsmn;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,8 +38,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import util.iota.ext.config.BlockchainClientConfig;
-import util.iota.ext.model.AccountResponse;
+import io.github.balsmn.config.BlockchainClientConfig;
+import io.github.balsmn.model.AccountResponse;
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest

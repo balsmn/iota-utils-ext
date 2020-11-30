@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext;
+package io.github.balsmn;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

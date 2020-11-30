@@ -23,36 +23,25 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext;
+package io.github.balsmn;
 
-import org.iota.jota.IotaAPI;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import util.iota.ext.config.BlockchainClientConfig;
+import org.iota.jota.utils.TrytesConverter;
+import org.junit.jupiter.api.Test;
+
 import lombok.extern.slf4j.Slf4j;
 
-@Component
 @Slf4j
-public class BlockchainClientInstance {
+public class TrytesTest {
 
-    final BlockchainClientConfig config;
+    private final String payload = "{\"id\": \"some-it\", \"message\": \"hello iota\"}";
 
-    public BlockchainClientInstance(BlockchainClientConfig config) {
-        this.config = config;
-    }
-
-    @Bean
-    public IotaAPI initClient() {
-        log.debug("Using IOTA network: {}", config.getHost());
-        // Create a new instance of the API object
-        // and specify which node to connect to
-        IotaAPI api = new IotaAPI.Builder()
-                .protocol("https")
-                .host(config.getHost())
-                .port(443)
-                .build();
-        log.debug("Blockchain Node info : {}", api.getNodeInfo());
-        return api;
+    @Test
+    public void testTrytesConversion() {
+        log.info("Testing conversion of {}", payload);
+        String trytesText = TrytesConverter.asciiToTrytes(payload);
+        String asciiText = TrytesConverter.trytesToAscii(trytesText);
+        assertThat(asciiText).isEqualTo(payload);
     }
 }

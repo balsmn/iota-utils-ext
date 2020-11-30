@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext.model;
+package io.github.balsmn.model;
 
 public enum WalletType {
     NORMAL,

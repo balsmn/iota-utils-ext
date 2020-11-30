@@ -23,18 +23,36 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext.model;
+package io.github.balsmn;
 
-import java.util.List;
+import org.iota.jota.IotaAPI;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
-import lombok.Builder;
-import lombok.Data;
+import io.github.balsmn.config.BlockchainClientConfig;
+import lombok.extern.slf4j.Slf4j;
 
-@Data
-@Builder
-public class AccountResponse {
-    private String accountAddress;
-    private List<String> accountSeeds;
-    private Long accountBalance;
-    private WalletType walletType;
+@Component
+@Slf4j
+public class BlockchainClientInstance {
+
+    final BlockchainClientConfig config;
+
+    public BlockchainClientInstance(BlockchainClientConfig config) {
+        this.config = config;
+    }
+
+    @Bean
+    public IotaAPI initClient() {
+        log.debug("Using IOTA network: {}", config.getHost());
+        // Create a new instance of the API object
+        // and specify which node to connect to
+        IotaAPI api = new IotaAPI.Builder()
+                .protocol("https")
+                .host(config.getHost())
+                .port(443)
+                .build();
+        log.debug("Blockchain Node info : {}", api.getNodeInfo());
+        return api;
+    }
 }

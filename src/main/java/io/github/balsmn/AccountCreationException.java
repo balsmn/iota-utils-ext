@@ -23,10 +23,10 @@
  * THE SOFTWARE.
  * #L%
  */
-package util.iota.ext;
+package io.github.balsmn;
 
-public class InvalidSignaturesException extends RuntimeException {
-    public InvalidSignaturesException(String msg) {
+public class AccountCreationException extends RuntimeException {
+    public AccountCreationException(String msg) {
         super(msg);
     }
 }
