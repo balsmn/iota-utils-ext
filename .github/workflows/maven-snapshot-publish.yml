@@ -1,12 +1,10 @@
 # This workflow will build a package using Maven and then publish it to GitHub packages when a commit is made to the main branch
 # For more information see: https://github.com/actions/setup-java#apache-maven-with-a-settings-path
 
-name: Maven Package
+name: Maven Snapshot Publish
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   build:
