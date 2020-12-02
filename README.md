@@ -13,15 +13,33 @@ friendliness. This library aims to bridge the gap and provide an easy to use API
 A microservice can simply add this library to its dependency and can start using it.
 
 ## Usage
-Include the following maven dependency to your microservice
+### Stable Release
+Include the following maven dependency in your microservice. The artifacts are available in Maven central.
 
 ```
 <dependency>
-    <groupId>util.iota</groupId>
+    <groupId>io.github.balsmn</groupId>
     <artifactId>iota-utils-ext</artifactId>
-    <packaging>jar</packaging>
+    <version>${latest.version}</version>
+</dependency>
+
+### Snapshot Release
+Include the following maven dependency and snapshot repository to your repository list in your microservice
+
+```
+<dependency>
+    <groupId>io.github.balsmn</groupId>
+    <artifactId>iota-utils-ext</artifactId>
     <version>0.1-SNAPSHOT</version>
 </dependency>
+
+....
+<repositories>
+    <repository>
+        <id>ossrh-snapshots</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+</repositories>
 ```
 
 Add the following to your spring application configurations
