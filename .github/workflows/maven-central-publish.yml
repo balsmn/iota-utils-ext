@@ -25,7 +25,7 @@ jobs:
       run: mvn -B verify --file pom.xml
 
     - name: Publish to Maven central
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn release:perform -s $GITHUB_WORKSPACE/settings.xml
       env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
