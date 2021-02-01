@@ -24,11 +24,5 @@ jobs:
         java-version: 11.0.x
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Integration and Unit Tests
-      run: mvn -B verify --file pom.xml
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        flag-name: run-${{ matrix.test_number }}
-        parallel: true
+      run: mvn -B verify cobertura:cobertura coveralls:report -Dcoveralls.repo.token=${{ secrets.COVERALLS_TOKEN }} --file pom.xml
   
